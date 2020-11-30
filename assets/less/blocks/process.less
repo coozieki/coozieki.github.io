@@ -1,0 +1,36 @@
+// main: ../style.less
+
+.section-process {
+    background-color: @fontPrimary;
+    overflow: hidden;
+}
+
+.process-inner {
+    width: 100%;
+    padding: 0 2rem;
+    
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-item {
+        color: white;
+        text-align: center;
+        margin: 1rem auto;
+        padding: 0 1rem;
+        &-octagon{
+            position: relative;
+            width: fit-content;
+            margin: 0 auto 1.5rem auto;
+
+            &-number {
+                position: absolute;
+                .posCenter();
+                font-size: 1.625rem;
+            }
+        }
+        &-step {
+
+        }
+    }
+}

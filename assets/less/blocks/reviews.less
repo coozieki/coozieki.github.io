@@ -1,0 +1,53 @@
+// main: ../style.less
+
+.section-reviews {
+    background: url("../images/reviews/bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.reviews-inner-slides-wrapper {
+    width: 100%;
+}
+
+.reviews-inner-slides {
+    width: 300%;
+    &-container {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+
+        color: white;
+        &-photo {
+            margin-bottom: 1rem;
+        }
+        &-who {
+            margin-bottom: 0.625rem;
+            &-client {
+                color: @buttonColor;
+                font-weight: 600;
+            }
+            &-name {
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        &-text {
+            width: 70%;
+            margin: 0 auto 2rem auto;
+            line-height: 2rem;
+            font-weight: 300;
+            opacity: .6;
+        }
+        &-rating {
+            justify-content: center;
+            color: @buttonColor;
+
+            i {
+                margin: 0 2px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,266 @@
+// main: ../style.less
+
+
+.section-intro {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 100vh;
+    background: url("../images/intro-back.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    justify-content: space-between;
+    
+    &-header {
+        width: 100%;
+        margin-bottom: 3rem;
+
+        &-container { 
+            width: 100%;
+            max-width: 1489px;
+            margin: 0 auto;
+            padding: 2.5rem 1.25rem 0 1.25rem;
+    
+            justify-content: space-between;
+            align-items: center;
+    
+            &-icons {
+                flex-basis: 30%;
+    
+                &__icon {
+                    margin-right: 2.25rem;
+                    padding: 0.5rem;
+    
+                    cursor: pointer;
+                    i {
+                        color: white;
+    
+                        transition: color @anim;
+                    }
+    
+                    &:hover {
+    
+                        i {
+                            color: @buttonColor;
+                        }
+    
+                    }
+                }
+    
+            }
+    
+            &-logo {
+                font-size: 1.285rem;
+                color: white;
+
+                @media (max-width: 480px) {
+                    display: none;
+                }
+            }
+
+            &-navbtn {
+                display: none;
+
+                color: white;
+                font-size: 1.5rem;
+
+                cursor: pointer;
+
+                @media (max-width: 1060px) {
+                    display: block;
+                }
+            }
+    
+            &-navbig {
+                align-items: center;
+
+                @media (max-width: 1060px) {
+                    &.flex-row {
+                        display: none;
+                    }
+                }
+                
+                &-item {
+                    padding: 0.625rem;
+                    margin-right: 1.5rem;
+                    border: 1px solid transparent;
+                    border-radius: 2px;
+
+                    &.no-decor {
+                        color: white;
+                    }
+    
+                    font-weight: 600;
+    
+                    transition: border-color @anim;
+                    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:hover {
+                        border-color: white;
+                    }
+    
+                    i {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+            &-navsml {
+                background-color: fade(#1f1f1f, 90%);
+
+                position: fixed;
+                z-index: 100;
+                right: -300px;
+                top: 0;
+                height: 100vh;
+
+                text-align: center;
+
+                @media (min-width: 1061px) {
+                    &.flex-col {
+                        display: none;
+                    }
+                }
+
+                @media (min-width: 751px) {
+                    width: 300px;
+                    padding-top: 2rem;
+                }
+
+                @media (max-width: 750px) {
+                    background-color: fade(#1f1f1f, 95%);
+
+                    justify-content: space-between;
+                }
+
+                &-close_button {
+                    position: absolute;
+                    z-index: 101;
+                    right: 8px;
+                    top: 4px;
+                    color: rgb(170, 170, 170);
+                    font-size: 1.5rem;
+
+                    transition: color @anim;
+                    cursor: pointer;
+
+                    @media (max-width: 750px) {
+                        font-size: 3rem;
+                    }
+
+                    &:hover {
+                        color: darken(rgb(170, 170, 170), 20%);
+                    }
+                }
+
+                &-item {
+                    position: relative;
+                    padding: 2rem 3rem;
+
+                    font-size: 1.5rem;
+
+                    transition: background-color @anim;
+
+                    @media (max-width: 750px) {
+                        padding: 0;
+                        border-bottom: 1px solid rgb(170, 170, 170);
+    
+                        justify-content: space-between;
+
+                        font-size: 2rem;
+                        height: 100%;
+
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    &.no-decor {
+                        color: rgb(170, 170, 170);
+                    }
+                    &:hover {
+                        background-color: fade(rgb(170, 170, 170), 20%);
+                    }
+                }
+            }
+        }
+    }
+    
+
+    &-slider {
+        width: 300%;
+
+        &-item {
+            width: 100%;
+
+            text-align: center;
+            color: white;
+
+            &-title {
+                margin-bottom: 2rem;
+
+                h1 {
+                    font-size: 3.5rem;
+
+                    @media (max-width: 480px) {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            &-subtitle {
+                width: 70%;
+                margin: 0 auto;
+
+                p {
+                    font-weight: 400;
+                }
+            }
+
+            &-button {
+                margin: 2.5rem auto 0 auto;
+            }
+        }
+    }
+
+    &-slider-controls {
+        width: 100%;
+        margin: 3.5rem auto 4rem auto;
+
+        &-container {
+            width: 100%;
+            justify-content: center;
+
+            &-item {
+                height: 16px;
+                width: 16px;
+                border-radius: 8px;
+                background-color: #a1a7ac;
+
+                margin: 0 2px;
+
+                cursor: pointer;
+                transition: background-color @anim;
+
+                &:hover {
+                    background-color: #fff;
+                }
+
+                &.active {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

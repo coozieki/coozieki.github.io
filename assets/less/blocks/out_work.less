@@ -1,0 +1,104 @@
+// main: ../style.less
+
+.section-our-work {
+    padding-top: 5rem;
+}
+
+.our-work-inner {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: @bpWork) {
+        &.flex-row {
+            flex-direction: column;
+        }
+    }
+
+    &-features {
+        flex-basis: 46%;
+
+        @media (max-width: @bpWork) {
+            margin-top: 2rem;
+            order: 2;
+        }
+
+        &-item {
+            box-shadow: 0 0 20px fade(black, 50%);
+
+            margin-bottom: 2.5rem;
+
+            @media (max-width: @bpWork) {
+                font-size: 1rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-text {
+                flex-basis: 55%;
+                padding: 2.5em 1.5em;
+
+                &-title {
+                    margin-bottom: 0.875em;
+                    
+                    h3 {
+                        font-size: @text-small;
+                    }
+                }
+
+                &-p {
+                    margin-bottom: 2.375em;
+                }
+
+                &-more {
+                    &:hover {
+                        a {
+                            color: @buttonColor;
+                        }
+                    }
+
+                    a {
+                        transition: color @anim;
+                    }
+                }
+            }
+
+            &-image {
+                flex-basis: 45%;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &-right {
+        flex-basis: 46%;
+        @media (max-width: @bpWork) {
+            text-align: center;
+        }
+
+        &-title {
+            margin-bottom: 1.75rem;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        &-text {
+            p {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &-button {
+            margin: 0 auto;
+        }
+    }
+}

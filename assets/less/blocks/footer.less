@@ -1,0 +1,60 @@
+footer {
+    background-color: #28252a;
+    width: 100%;
+}
+
+.footer-inner {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+
+    &-nav {
+        align-items: center;
+        
+        &-item {
+            margin-right: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            font-weight: 600;
+
+            transition: border-color @anim;
+
+            @media (max-width: 400px) {
+                font-size: 0.75rem;
+                margin-right: 0.5rem;
+            }
+
+            &.no-decor {
+                color: white;
+            }
+            
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                border-color: white;
+            }
+
+            i {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &-icons-icon {
+        margin: 1.75rem 10px 0 10px;
+        i {
+            color: fade(@buttonColor, 50%);
+            font-size: 1.25rem;
+
+            transition: color @anim;
+
+            &:hover {
+                color: @buttonColor;
+            }
+        }
+    }
+}
